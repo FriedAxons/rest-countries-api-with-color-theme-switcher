@@ -6,7 +6,7 @@ on:
       - main # Trigger the workflow on pushes to the main branch
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest # Use the latest Ubuntu runner
 
     steps:
@@ -16,7 +16,7 @@ jobs:
 
       # Step 2: Set up Node.js environment
       - name: Set up Node.js
-        uses: actions/setup-node@v4.1.0 # Use v4 for the latest setup-node action
+        uses: actions/setup-node@v4 # Use v4 for the latest setup-node action
         with:
           node-version: "latest"
 
@@ -29,10 +29,13 @@ jobs:
       - name: Build project
         run: |
           npm run build
+          ls -al dist
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4 # Use the latest v4 for GitHub Pages deployment
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # Target the gh-pages branch
-          folder: dist # Specify the build output folder (should match your Vite config)
+          folder: ./dist # Specify the build output folder (should match your Vite config)   
+    
+    permissions:
+      contents: write # Ensure the GitHub token has write access to contents

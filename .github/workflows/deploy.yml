@@ -36,3 +36,4 @@ jobs:
         with:
           branch: gh-pages # Target the gh-pages branch
           folder: dist # Specify the build output folder (should match your Vite config)
+          token: ${{ secrets.GITHUB_TOKEN }} # GitHub automatically provides a token for workflows

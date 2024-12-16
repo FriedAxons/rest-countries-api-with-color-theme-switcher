@@ -16,7 +16,7 @@ jobs:
 
       # Step 2: Set up Node.js environment
       - name: Set up Node.js
-        uses: actions/setup-node@v4 # Use v4 for the latest setup-node action
+        uses: actions/setup-node@v4.1.0
         with:
           node-version: "latest"
 

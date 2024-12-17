@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  #root {
+    @apply font-nunito-sans;
+  }
+}
+
+/* @layer components {} */
+
+@layer utilities {
+  .x-p {
+    @apply px-16;
+  }
+
+  .mx-p {
+    @apply px-5;
+  }
+}

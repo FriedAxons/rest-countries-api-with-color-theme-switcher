@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class", // Enable dark mode based on a class
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}", // Includes all relevant files in your src directory
@@ -21,5 +22,4 @@ export default {
     },
   },
   plugins: [],
-  darkMode: "class", // Enable dark mode based on a class
 };

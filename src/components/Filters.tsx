@@ -19,14 +19,21 @@ const Filters = ({
 
   return (
     <div className="flex justify-between items-center mx-p lg:x-p lg:py-11">
-      {/* Search Input */}
-      <input
-        type="text"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search for a country..."
-        className="lg:w-[383.69px] dark:bg-darkblue bg-white placeholder-ldarkgray dark:placeholder-white py-3 rounded-md shadow-md"
-      />
+      {/* Search Input with Icon */}
+      <div className="relative w-full lg:w-[383.69px]">
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search for a country..."
+          className="w-full dark:bg-darkblue bg-white placeholder:text-sm placeholder-ldarkgray dark:placeholder-white dark:text-white text-lverydarkblue font-light py-3 pl-16 rounded-md shadow-md"
+        />
+        <img
+          src="/rest-countries-api-with-color-theme-switcher/icons/magnifying-glass-solid.svg"
+          alt="Search Icon"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 w-5 h-5"
+        />
+      </div>
 
       {/* Region Filter Dropdown */}
       <div className="relative">
@@ -45,7 +52,7 @@ const Filters = ({
                   : "/rest-countries-api-with-color-theme-switcher/icons/angle-up-solid.svg" // Up caret when closed
               }
               alt="Caret icon"
-              className="w-4 h-4 dark:invert" // Adjust size and smooth transition
+              className="w-4 h-3 dark:invert" // Adjust size and smooth transition
             />
           </span>
         </button>

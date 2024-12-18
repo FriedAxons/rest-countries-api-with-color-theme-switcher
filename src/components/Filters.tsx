@@ -25,14 +25,14 @@ const Filters = ({
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search for a country..."
-        className="lg:w-[383.69px] dark:bg-darkblue bg-white placeholder-ldarkgray dark:placeholder-white py-3 rounded-sm shadow-md"
+        className="lg:w-[383.69px] dark:bg-darkblue bg-white placeholder-ldarkgray dark:placeholder-white py-3 rounded-md shadow-md"
       />
 
       {/* Region Filter Dropdown */}
       <div className="relative">
         <button
           onClick={toggleDropdown}
-          className="flex items-center  dark:bg-darkblue bg-white text-lverydarkblue dark:text-white rounded-sm shadow-md"
+          className="flex items-center  dark:bg-darkblue bg-white text-lverydarkblue dark:text-white py-3 rounded-md shadow-md"
           aria-haspopup="listbox"
           aria-expanded={showDropdown ? "true" : "false"}
         >

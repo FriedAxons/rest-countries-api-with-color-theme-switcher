@@ -21,18 +21,21 @@ const CountryCard = ({
       <img
         src={flag}
         alt={`${name} flag`}
-        className="w-full h-[200px] object-cover"
+        className="w-full lg:h-[265px] object-cover rounded-t-md"
       />
-      <div>
-        <h3>{name}</h3>
+      <div className="dark:text-white text-lverydarkblue pl-6 pt-6 pb-11">
+        <p className="text-lg font-bold mb-3">{name}</p>
         <p>
-          <strong>Population:</strong> {population.toLocaleString()}
+          <strong>Population:</strong>{" "}
+          <span className="font-extralight">{population.toLocaleString()}</span>
         </p>
         <p>
-          <strong>Region:</strong> {region}
+          <strong>Region:</strong>{" "}
+          <span className="font-extralight">{region}</span>
         </p>
         <p>
-          <strong>Capital:</strong> {capital.join(", ")}
+          <strong>Capital:</strong>{" "}
+          <span className="font-extralight">{capital.join(", ")}</span>
         </p>
       </div>
     </Link>

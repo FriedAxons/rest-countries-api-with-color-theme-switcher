@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 const App = (): JSX.Element => {
   return (
     <Router>
-      <div className="dark:bg-verydarkblue bg-lverylightgray">
+      <div className="dark:bg-verydarkblue bg-lverylightgray min-h-screen">
         <Header />
         <Routes>
           <Route

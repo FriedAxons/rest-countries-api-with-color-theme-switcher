@@ -24,7 +24,7 @@ const CountryCard = ({
         className="w-full lg:h-[265px] object-cover rounded-t-md"
       />
       <div className="dark:text-white text-lverydarkblue pl-6 pt-6 pb-11">
-        <p className="text-lg font-bold mb-3">{name}</p>
+        <p className="text-xl dark:font-bold font-extrabold mb-3">{name}</p>
         <p>
           <strong>Population:</strong>{" "}
           <span className="dark:font-extralight font-light">

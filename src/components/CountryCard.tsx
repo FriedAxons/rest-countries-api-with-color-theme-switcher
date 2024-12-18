@@ -14,8 +14,15 @@ const CountryCard = ({
   capital: string[];
 }): JSX.Element => {
   return (
-    <Link to={`/country/${name}`} className="country-card">
-      <img src={flag} alt={`${name} flag`} className="flag" />
+    <Link
+      to={`/country/${name}`}
+      className="block bg-white dark:bg-darkblue shadow-md rounded-md"
+    >
+      <img
+        src={flag}
+        alt={`${name} flag`}
+        className="w-full h-[200px] object-cover"
+      />
       <div>
         <h3>{name}</h3>
         <p>

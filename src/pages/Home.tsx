@@ -67,16 +67,18 @@ const Home = (): JSX.Element => {
         region={region}
         setRegion={setRegion}
       />
-      <div className="country-cards">
+      <div className="flex flex-col lg:flex-row lg:flex-wrap lg:justify-start lg:gap-20 mx-p lg:x-p">
         {filteredCountries.map((country) => (
-          <CountryCard
-            key={country.name} // Each country needs a unique key
-            name={country.name}
-            flag={country.flag}
-            population={country.population}
-            region={country.region}
-            capital={country.capital}
-          />
+          <div className="w-full lg:max-w-[383.7px]">
+            <CountryCard
+              key={country.name} // Each country needs a unique key
+              name={country.name}
+              flag={country.flag}
+              population={country.population}
+              region={country.region}
+              capital={country.capital}
+            />
+          </div>
         ))}
       </div>
     </main>

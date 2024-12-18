@@ -18,14 +18,14 @@ const Filters = ({
   const toggleDropdown = () => setShowDropdown((prev) => !prev);
 
   return (
-    <div className="flex justify-between items-center mx-p lg:x-p">
+    <div className="flex justify-between items-center mx-p lg:x-p lg:py-11">
       {/* Search Input */}
       <input
         type="text"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search for a country..."
-        className="dark:bg-darkblue bg-white placeholder-ldarkgray dark:placeholder-white rounded-sm shadow-md"
+        className="lg:w-[383.69px] dark:bg-darkblue bg-white placeholder-ldarkgray dark:placeholder-white py-3 rounded-sm shadow-md"
       />
 
       {/* Region Filter Dropdown */}

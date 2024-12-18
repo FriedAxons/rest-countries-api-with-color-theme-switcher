@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Header from "./components/Header";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 // import CountryDetails from "./pages/CountryDetails";
 
 const App = (): JSX.Element => {
@@ -8,8 +8,12 @@ const App = (): JSX.Element => {
     <Router>
       <div className="dark:bg-verydarkblue bg-lverylightgray">
         <Header />
-        {/* <Routes>
-        </Routes> */}
+        <Routes>
+          <Route
+            path="/rest-countries-api-with-color-theme-switcher/"
+            element={<Home />}
+          />
+        </Routes>
       </div>
     </Router>
   );

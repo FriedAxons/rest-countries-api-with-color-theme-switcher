@@ -6,7 +6,8 @@ interface FiltersProps {
 }
 
 const Filters = ({ search, setSearch, region, setRegion }: FiltersProps): JSX.Element => {
-  return ()
+  return (
+  );
 }
 
 export default Filters;

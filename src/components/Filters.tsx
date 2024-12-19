@@ -59,7 +59,7 @@ const Filters = ({
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search for a country..."
-          className="w-full dark:bg-darkblue bg-white placeholder:text-base placeholder-ldarkgray dark:placeholder-white dark:text-white text-lverydarkblue dark:font-light text-lg font-normal py-5 pl-20 rounded-md shadow-md focus:outline-none"
+          className="w-full dark:bg-darkblue bg-white placeholder:text-base placeholder-ldarkgray dark:placeholder-white dark:text-white text-lverydarkblue dark:font-light text-lg font-normal py-5 pl-20 rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)] focus:outline-none"
         />
         <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
           <MagnifyingGlassIcon />
@@ -70,7 +70,7 @@ const Filters = ({
       <div className="relative">
         <button
           onClick={toggleDropdown}
-          className="flex justify-between items-center lg:w-[250px] dark:bg-darkblue bg-white text-lverydarkblue dark:text-white dark:font-light font-medium text-base py-5 px-6 rounded-md shadow-md"
+          className="flex justify-between items-center lg:w-[250px] dark:bg-darkblue bg-white text-lverydarkblue dark:text-white dark:font-light font-medium text-base py-5 px-6 rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)]"
           aria-haspopup="listbox"
           aria-expanded={showDropdown ? "true" : "false"}
         >

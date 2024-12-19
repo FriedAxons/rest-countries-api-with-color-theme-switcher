@@ -15,8 +15,8 @@ const CountryCard = ({
 }): JSX.Element => {
   return (
     <Link
-      to={`/country/${name}`}
-      className="block bg-white dark:bg-darkblue shadow-md rounded-md transform transition-transform duration-300 hover:scale-105"
+      to={`/country/${encodeURIComponent(name)}`}
+      className="block bg-white dark:bg-darkblue shadow-lg rounded-md transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
     >
       <img
         src={flag}
@@ -24,7 +24,7 @@ const CountryCard = ({
         className="w-full lg:h-[265px] object-cover rounded-t-md"
       />
       <div className="dark:text-white text-lverydarkblue pl-6 pt-6 pb-11">
-        <p className="text-xl dark:font-bold font-extrabold mb-3">{name}</p>
+        <h3 className="text-xl dark:font-bold font-extrabold mb-3">{name}</h3>
         <p>
           <strong>Population:</strong>{" "}
           <span className="dark:font-extralight font-light">

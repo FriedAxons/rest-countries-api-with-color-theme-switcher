@@ -59,7 +59,7 @@ const Filters = ({
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search for a country..."
-          className="w-full dark:bg-darkblue bg-white placeholder:text-base placeholder-ldarkgray dark:placeholder-white dark:text-white text-lverydarkblue dark:font-light text-lg font-normal py-5 pl-20 rounded-md shadow-md"
+          className="w-full dark:bg-darkblue bg-white placeholder:text-base placeholder-ldarkgray dark:placeholder-white dark:text-white text-lverydarkblue dark:font-light text-lg font-normal py-5 pl-20 rounded-md shadow-md focus:outline-none"
         />
         <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
           <MagnifyingGlassIcon />

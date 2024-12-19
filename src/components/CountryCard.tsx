@@ -16,7 +16,7 @@ const CountryCard = ({
   return (
     <Link
       to={`/country/${name}`}
-      className="block bg-white dark:bg-darkblue shadow-md rounded-md"
+      className="block bg-white dark:bg-darkblue shadow-md rounded-md transform transition-transform duration-300 hover:scale-105"
     >
       <img
         src={flag}

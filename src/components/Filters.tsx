@@ -83,7 +83,7 @@ const Filters = ({
         {showDropdown && (
           <div className="absolute top-full lg:w-[250px] text-lverydarkblue dark:text-white mt-1 bg-white dark:bg-darkblue dark:font-light text-base pb-4 pt-2 px-6 rounded-md shadow-md rounded-md shadow-md z-10">
             <ul role="listbox">
-              {["Africa", "America", "Asia", "Europe", "Oceania"].map(
+              {["Africa", "Americas", "Asia", "Europe", "Oceania"].map(
                 (regionOption) => (
                   <li
                     key={regionOption}

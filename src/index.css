@@ -4,7 +4,7 @@
 
 @layer base {
   #root {
-    @apply font-nunito-sans;
+    @apply h-screen overflow-auto font-nunito-sans no-scrollbar;
   }
 }
 
@@ -17,5 +17,15 @@
 
   .mx-p {
     @apply px-4;
+  }
+
+   /* Custom utility to hide the scrollbar but allow scrolling */
+  .no-scrollbar {
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
   }
 }

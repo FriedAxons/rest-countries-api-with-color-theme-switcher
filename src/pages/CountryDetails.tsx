@@ -126,14 +126,14 @@ const CountryDetails = (): JSX.Element => {
           </div>
 
           {/* Border Countries */}
-          <div className="flex items-center mt-10">
-            <strong className="mr-4">Border Countries:</strong>
-            <div className="flex flex-wrap gap-2 mt-2">
+          <div className="lg:flex lg:items-center mt-10">
+            <strong className="lg:mr-4">Border Countries:</strong>
+            <div className="flex flex-wrap lg:gap-2 gap-2.5 mt-4">
               {country.borders?.length > 0 ? (
                 country.borders.map((border) => (
                   <button
                     key={border}
-                    className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue px-4 py-1 rounded"
+                    className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-0.5 lg:px-7 py-1.5 px-9 lg:rounded-sm rounded shadow-md"
                   >
                     {border}
                   </button>

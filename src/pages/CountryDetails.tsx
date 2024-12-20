@@ -137,12 +137,12 @@ const CountryDetails = (): JSX.Element => {
             <div className="flex flex-wrap lg:gap-2 gap-2.5 mt-4">
               {country.borders?.length > 0 ? (
                 country.borders.map((border) => (
-                  <button
+                  <span
                     key={border}
                     className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-1 lg:px-7 py-1.5 px-9 lg:rounded-sm rounded shadow-md"
                   >
                     {border}
-                  </button>
+                  </span>
                 ))
               ) : (
                 <span className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-0.5 lg:px-7 py-1.5 px-9 lg:rounded-sm rounded shadow-md">

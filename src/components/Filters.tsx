@@ -93,7 +93,7 @@ const Filters = ({
                       setRegion(regionOption);
                       setShowDropdown(false);
                     }}
-                    className="mt-2 hover:cursor-pointer"
+                    className="mt-2 hover:cursor-pointer hover:font-medium"
                   >
                     {regionOption}
                   </li>

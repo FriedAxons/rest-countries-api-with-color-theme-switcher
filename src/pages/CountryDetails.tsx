@@ -104,7 +104,7 @@ const CountryDetails = (): JSX.Element => {
                 <strong>Region:</strong> {country.region}
               </p>
               <p>
-                <strong>Sub Region:</strong> {country.subregion}
+                <strong>Sub Region:</strong> {country.subregion || "N/A"}
               </p>
               <p>
                 <strong>Capital:</strong> {country.capital || "N/A"}

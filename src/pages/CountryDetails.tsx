@@ -72,65 +72,79 @@ const CountryDetails = (): JSX.Element => {
         </button>
       </div>
 
-      <div>
+      <div className="flex flex-col lg:flex-row items-start gap-40">
         <img
           src={country.flags.svg}
           alt={`${country.name} flag`}
-          className=""
+          className="w-full lg:w-1/2 lg:h-[580px] h-[250px] lg:object-cover shadow-xl"
         />
 
-        <div>
-          <div>
-            <h1>{country.name.official}</h1>
-            <p>
-              <strong>Native Name:</strong> {country.name.official}
-            </p>
-            <p>
-              <strong>Population:</strong> {country.population.toLocaleString()}
-            </p>
-            <p>
-              <strong>Region:</strong> {country.region}
-            </p>
-            <p>
-              <strong>Sub Region:</strong> {country.subregion}
-            </p>
-            <p>
-              <strong>Capital:</strong> {country.capital || "N/A"}
-            </p>
+        <div className="dark:text-white text-lverydarkblue">
+          {/* Country Name */}
+          <h1 className="text-3xl font-bold mb-6">{country.name.common}</h1>
+
+          {/* Two Columns for Country Details */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-32">
+            {/* Left Column */}
+            <div className="space-y-2">
+              <p>
+                <strong>Native Name:</strong> {country.name.official}
+              </p>
+              <p>
+                <strong>Population:</strong>{" "}
+                {country.population.toLocaleString()}
+              </p>
+              <p>
+                <strong>Region:</strong> {country.region}
+              </p>
+              <p>
+                <strong>Sub Region:</strong> {country.subregion}
+              </p>
+              <p>
+                <strong>Capital:</strong> {country.capital || "N/A"}
+              </p>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-2">
+              <p>
+                <strong>Top Level Domain:</strong> {country.tld.join(", ")}
+              </p>
+              <p>
+                <strong>Currencies:</strong>{" "}
+                {country.currencies
+                  ? Object.keys(country.currencies).join(", ")
+                  : "N/A"}
+              </p>
+              <p>
+                <strong>Languages:</strong>{" "}
+                {country.languages
+                  ? Object.values(country.languages).join(", ")
+                  : "N/A"}
+              </p>
+            </div>
           </div>
 
-          <div>
-            <p>
-              <strong>Top Level Domain:</strong> {country.tld.join(", ")}
-            </p>
-            <p>
-              <strong>Currencies:</strong>{" "}
-              {country.currencies
-                ? Object.keys(country.currencies).join(", ")
-                : "N/A"}
-            </p>
-            <p>
-              <strong>Languages:</strong>{" "}
-              {country.languages
-                ? Object.values(country.languages).join(", ")
-                : "N/A"}
-            </p>
+          {/* Border Countries */}
+          <div className="flex items-center mt-10">
+            <strong className="mr-4">Border Countries:</strong>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {country.borders?.length > 0 ? (
+                country.borders.map((border) => (
+                  <button
+                    key={border}
+                    className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue px-4 py-1 rounded"
+                  >
+                    {border}
+                  </button>
+                ))
+              ) : (
+                <span>N/A</span>
+              )}
+            </div>
           </div>
         </div>
       </div>
-
-      {country.borders && (
-        <div>
-          <p>Border Countries:</p>
-          <p>
-            {country.borders.map((border) => (
-              <span key={border} className="">
-                {border}
-              </span>
-            ))}
-          </p>
-        </div>
-      )}
     </div>
   );
 };

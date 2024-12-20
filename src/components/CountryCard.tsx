@@ -21,7 +21,7 @@ const CountryCard = ({
       <img
         src={flag}
         alt={`${name} flag`}
-        className="w-full lg:h-[265px] object-cover rounded-t-md"
+        className="w-full lg:h-[265px] h-[180px] object-cover rounded-t-md"
       />
       <div className="dark:text-white text-lverydarkblue pl-6 lg:pt-6 pt-7 pb-11">
         <h3 className="text-xl dark:font-bold font-extrabold lg:mb-3 mb-4">

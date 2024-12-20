@@ -67,7 +67,7 @@ const Home = (): JSX.Element => {
         region={region}
         setRegion={setRegion}
       />
-      <div className="flex flex-col lg:flex-row lg:flex-wrap lg:justify-start lg:gap-20 mx-p lg:x-p">
+      <div className="flex flex-col lg:flex-row lg:flex-wrap lg:justify-start lg:gap-20 gap-10 lg:pt-0 pt-1 lg:pb-0 pb-16 lg:x-p px-12">
         {filteredCountries.map((country) => (
           <div className="w-full lg:max-w-[383.7px]">
             <CountryCard

@@ -23,8 +23,10 @@ const CountryCard = ({
         alt={`${name} flag`}
         className="w-full lg:h-[265px] object-cover rounded-t-md"
       />
-      <div className="dark:text-white text-lverydarkblue pl-6 pt-6 pb-11">
-        <h3 className="text-xl dark:font-bold font-extrabold mb-3">{name}</h3>
+      <div className="dark:text-white text-lverydarkblue pl-6 lg:pt-6 pt-7 pb-11">
+        <h3 className="text-xl dark:font-bold font-extrabold lg:mb-3 mb-4">
+          {name}
+        </h3>
         <p>
           <strong>Population:</strong>{" "}
           <span className="dark:font-extralight font-light">

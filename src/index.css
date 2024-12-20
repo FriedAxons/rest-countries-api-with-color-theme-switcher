@@ -16,6 +16,6 @@
   }
 
   .mx-p {
-    @apply px-7;
+    @apply px-4;
   }
 }

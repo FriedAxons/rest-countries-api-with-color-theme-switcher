@@ -22,7 +22,7 @@ const Filters = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      className="w-5 h-5 fill-ldarkgray dark:fill-white" // Use fill to control color in light/dark mode
+      className="lg:w-5 lg:h-5 w-4 h-4 fill-ldarkgray dark:fill-white" // Use fill to control color in light/dark mode
     >
       <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
     </svg>
@@ -33,7 +33,7 @@ const Filters = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      className="w-4 h-4 fill-lverydarkblue dark:fill-white" // Use fill to control color in light/dark mode
+      className="lg:w-4 lg:h-4 w-3 h-3 fill-lverydarkblue dark:fill-white" // Use fill to control color in light/dark mode
     >
       <path d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
     </svg>
@@ -44,14 +44,14 @@ const Filters = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      className="w-4 h-4 fill-lverydarkblue dark:fill-white" // Use fill to control color in light/dark mode
+      className="lg:w-4 lg:h-4 w-3 h-3 fill-lverydarkblue dark:fill-white" // Use fill to control color in light/dark mode
     >
       <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
     </svg>
   );
 
   return (
-    <div className="flex justify-between items-center mx-p lg:x-p lg:py-11">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-p lg:x-p lg:py-11 py-7">
       {/* Search Input with Icon */}
       <div className="relative w-full lg:w-[660px]">
         <input
@@ -59,7 +59,7 @@ const Filters = ({
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search for a country..."
-          className="w-full dark:bg-darkblue bg-white placeholder:text-base placeholder-ldarkgray dark:placeholder-white dark:text-white text-lverydarkblue dark:font-light text-lg font-normal py-5 pl-20 rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)] focus:outline-none"
+          className="w-full dark:bg-darkblue bg-white placeholder:text-base placeholder-ldarkgray dark:placeholder-white dark:text-white text-lverydarkblue dark:font-light text-lg font-normal lg:py-5 py-4 pl-20 rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)] focus:outline-none"
         />
         <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
           <MagnifyingGlassIcon />
@@ -67,10 +67,10 @@ const Filters = ({
       </div>
 
       {/* Region Filter Dropdown */}
-      <div className="relative">
+      <div className="relative lg:py-0 pt-10">
         <button
           onClick={toggleDropdown}
-          className="flex justify-between items-center lg:w-[250px] dark:bg-darkblue bg-white text-lverydarkblue dark:text-white dark:font-light font-medium text-base py-5 px-6 rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)]"
+          className="flex justify-between items-center lg:w-[250px] dark:bg-darkblue bg-white text-lverydarkblue dark:text-white dark:font-light font-medium text-base lg:py-5 py-4 px-6 rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)]"
           aria-haspopup="listbox"
           aria-expanded={showDropdown ? "true" : "false"}
         >
@@ -81,7 +81,7 @@ const Filters = ({
         </button>
 
         {showDropdown && (
-          <div className="absolute top-full lg:w-[250px] text-lverydarkblue dark:text-white mt-1 bg-white dark:bg-darkblue dark:font-light text-base pb-4 pt-2 px-6 rounded-md shadow-md rounded-md shadow-md z-10">
+          <div className="absolute top-full lg:w-[250px] w-[210.5px] text-lverydarkblue dark:text-white mt-1 bg-white dark:bg-darkblue dark:font-light text-base pb-4 pt-2 px-6 rounded-md shadow-md rounded-md shadow-md z-10">
             <ul role="listbox">
               {["Africa", "Americas", "Asia", "Europe", "Oceania"].map(
                 (regionOption) => (

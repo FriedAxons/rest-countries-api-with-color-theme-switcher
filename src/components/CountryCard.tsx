@@ -27,17 +27,17 @@ const CountryCard = ({
         <h3 className="text-xl dark:font-bold font-extrabold lg:mb-3 mb-4">
           {name}
         </h3>
-        <p>
+        <p className="lg:mb-0 mb-0.5">
           <strong>Population:</strong>{" "}
           <span className="dark:font-extralight font-light">
             {population.toLocaleString()}
           </span>
         </p>
-        <p>
+        <p className="lg:mb-0 mb-0.5">
           <strong>Region:</strong>{" "}
           <span className="dark:font-extralight font-light">{region}</span>
         </p>
-        <p>
+        <p className="lg:mb-0 mb-0.5">
           <strong>Capital:</strong>{" "}
           <span className="dark:font-extralight font-light">
             {capital.join(", ")}

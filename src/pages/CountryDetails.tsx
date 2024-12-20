@@ -56,7 +56,7 @@ const CountryDetails = (): JSX.Element => {
 
   return (
     <div className="mx-p lg:x-p">
-      <div className="lg:py-11">
+      <div className="lg:py-16">
         <button
           onClick={() => navigate(-1)}
           className="flex items-center dark:bg-darkblue bg-white dark:text-white text-lverydarkblue dark:font-light text-sm font-normal py-2 px-7 lg:rounded-md rounded dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)]"
@@ -76,17 +76,19 @@ const CountryDetails = (): JSX.Element => {
         <img
           src={country.flags.svg}
           alt={`${country.name} flag`}
-          className="w-full lg:w-1/2 lg:h-[580px] h-[250px] lg:object-cover shadow-xl"
+          className="w-full lg:w-1/2 lg:h-[535px] h-[250px] lg:object-cover shadow-xl"
         />
 
         <div className="dark:text-white text-lverydarkblue">
           {/* Country Name */}
-          <h1 className="text-3xl font-bold mb-6">{country.name.common}</h1>
+          <h1 className="text-3xl font-bold mb-6 lg:pt-20 lg:pb-2">
+            {country.name.common}
+          </h1>
 
           {/* Two Columns for Country Details */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-32">
             {/* Left Column */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               <p>
                 <strong>Native Name:</strong> {country.name.official}
               </p>
@@ -106,7 +108,7 @@ const CountryDetails = (): JSX.Element => {
             </div>
 
             {/* Right Column */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               <p>
                 <strong>Top Level Domain:</strong> {country.tld.join(", ")}
               </p>
@@ -126,20 +128,22 @@ const CountryDetails = (): JSX.Element => {
           </div>
 
           {/* Border Countries */}
-          <div className="lg:flex lg:items-center mt-10">
-            <strong className="lg:mr-4">Border Countries:</strong>
+          <div className="lg:flex lg:items-center lg:mt-16">
+            <strong className="lg:mr-4 lg:pt-[14px]">Border Countries:</strong>
             <div className="flex flex-wrap lg:gap-2 gap-2.5 mt-4">
               {country.borders?.length > 0 ? (
                 country.borders.map((border) => (
                   <button
                     key={border}
-                    className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-0.5 lg:px-7 py-1.5 px-9 lg:rounded-sm rounded shadow-md"
+                    className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-1 lg:px-7 py-1.5 px-9 lg:rounded-sm rounded shadow-md"
                   >
                     {border}
                   </button>
                 ))
               ) : (
-                <span>N/A</span>
+                <span className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-0.5 lg:px-7 py-1.5 px-9 lg:rounded-sm rounded shadow-md">
+                  N/A
+                </span>
               )}
             </div>
           </div>

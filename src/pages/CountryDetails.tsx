@@ -90,7 +90,7 @@ const CountryDetails = (): JSX.Element => {
           </h1>
 
           {/* Two Columns for Country Details */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-28">
             {/* Left Column */}
             <div className="space-y-3">
               <p>

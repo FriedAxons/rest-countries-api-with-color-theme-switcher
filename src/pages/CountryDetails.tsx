@@ -87,7 +87,7 @@ const CountryDetails = (): JSX.Element => {
 
         <div className="dark:text-white text-lverydarkblue lg:pb-0 pb-[70px]">
           {/* Country Name */}
-          <h1 className="text-3xl font-bold mb-6 lg:pt-20 lg:pb-2">
+          <h1 className="lg:text-3xl text-[26px] lg:font-bold font-extrabold mb-6 lg:pt-20 lg:pb-2">
             {country.name.common}
           </h1>
 

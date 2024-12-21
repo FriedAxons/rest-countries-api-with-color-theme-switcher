@@ -76,7 +76,7 @@ const CountryDetails = (): JSX.Element => {
         </button>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start lg:gap-40 gap-14">
+      <div className="flex flex-col lg:flex-row items-start lg:gap-40 gap-12">
         <div className="w-full lg:w-1/2 lg:h-[535px] h-[250px] lg:object-cover shadow-xl">
           <img
             src={country.flags.svg}
@@ -151,14 +151,16 @@ const CountryDetails = (): JSX.Element => {
           </div>
 
           {/* Border Countries */}
-          <div className="lg:flex lg:items-center lg:mt-16">
-            <strong className="lg:mr-4 lg:pt-[14px]">Border Countries:</strong>
+          <div className="lg:flex lg:items-center lg:mt-16 mt-10">
+            <strong className="lg:mr-4 lg:pt-[14px] lg:text-base text-lg font-medium">
+              Border Countries:
+            </strong>
             <div className="flex flex-wrap lg:gap-2 gap-2.5 mt-4">
               {country.borders?.length > 0 ? (
                 country.borders.map((border) => (
                   <span
                     key={border}
-                    className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-1 lg:px-7 py-1.5 px-9 lg:rounded-sm rounded shadow-md"
+                    className="dark:bg-darkblue bg-white dark:text-white text-lverydarkblue text-sm font-light lg:py-1 lg:px-7 py-1.5 px-10 lg:rounded-sm rounded shadow-md"
                   >
                     {border}
                   </span>

@@ -15,6 +15,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ## Overview
 
+This challenge was provided by Frontend Mentor. The goal is to make your own version as close to the design images provided as you can. You can use whatever you'd like to accomplish this.
+
 ### The challenge
 
 Users should be able to:
@@ -32,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Live Site URL: [GitHub Live Page](https://friedaxons.github.io/rest-countries-api-with-color-theme-switcher/)
 
 ### Built with
 
@@ -45,5 +47,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [FriedAxons](https://github.com/FriedAxons)
+- Frontend Mentor - [@FriedAxons](https://www.frontendmentor.io/profile/FriedAxons)

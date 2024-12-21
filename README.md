@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-CCfEplcPzm)
 - Live Site URL: [GitHub Live Page](https://friedaxons.github.io/rest-countries-api-with-color-theme-switcher/)
 
 ### Built with

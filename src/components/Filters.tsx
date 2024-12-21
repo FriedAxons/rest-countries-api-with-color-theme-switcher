@@ -70,7 +70,7 @@ const Filters = ({
       <div className="relative lg:py-0 pt-10">
         <button
           onClick={toggleDropdown}
-          className="flex justify-between items-center lg:w-[250px] dark:bg-darkblue bg-white text-lverydarkblue dark:text-white dark:font-light font-medium text-base lg:py-5 py-4 px-6 2xl:mr-[17px] rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)]"
+          className="flex justify-between items-center lg:w-[250px] dark:bg-darkblue bg-white text-lverydarkblue dark:text-white dark:font-light font-medium text-base lg:py-5 py-4 px-6 2xl:mr-[17px] rounded-md dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)] focus:outline-none"
           aria-haspopup="listbox"
           aria-expanded={showDropdown ? "true" : "false"}
         >

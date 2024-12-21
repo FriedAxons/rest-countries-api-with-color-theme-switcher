@@ -51,7 +51,7 @@ const Filters = ({
   );
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-p lg:x-p lg:py-11 py-7">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mx-p lg:x-p lg:py-11 py-6">
       {/* Search Input with Icon */}
       <div className="relative w-full lg:w-[660px]">
         <input

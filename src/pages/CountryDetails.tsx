@@ -66,67 +66,86 @@ const CountryDetails = (): JSX.Element => {
 
   return (
     <div className="mx-p lg:x-p">
-      <div className="lg:py-16">
+      <div className="lg:py-16 pt-10 pb-16">
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center dark:bg-darkblue bg-white dark:text-white text-lverydarkblue dark:font-light text-sm font-normal py-2 px-7 lg:rounded-md rounded dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)]"
+          className="flex items-center dark:bg-darkblue bg-white dark:text-white text-lverydarkblue dark:font-light text-sm font-normal py-2 lg:px-7 px-6 lg:rounded-md rounded dark:shadow-md shadow-[0px_6px_10px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.08)]"
         >
           <BackArrowIcon />
           Back
         </button>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start gap-40">
-        <img
-          src={country.flags.svg}
-          alt={`${country.name} flag`}
-          className="w-full lg:w-1/2 lg:h-[535px] h-[250px] lg:object-cover shadow-xl"
-        />
+      <div className="flex flex-col lg:flex-row items-start lg:gap-40 gap-14">
+        <div className="w-full lg:w-1/2 lg:h-[535px] h-[250px] lg:object-cover shadow-xl">
+          <img
+            src={country.flags.svg}
+            alt={`${country.name} flag`}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-        <div className="dark:text-white text-lverydarkblue">
+        <div className="dark:text-white text-lverydarkblue lg:pb-0 pb-[70px]">
           {/* Country Name */}
           <h1 className="text-3xl font-bold mb-6 lg:pt-20 lg:pb-2">
             {country.name.common}
           </h1>
 
           {/* Two Columns for Country Details */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-y-4 gap-y-12 gap-x-28">
             {/* Left Column */}
             <div className="space-y-3">
               <p>
-                <strong>Native Name:</strong> {country.name.official}
+                <strong>Native Name:</strong>{" "}
+                <span className="dark:font-light">{country.name.official}</span>
               </p>
               <p>
                 <strong>Population:</strong>{" "}
-                {country.population.toLocaleString()}
+                <span className="dark:font-light">
+                  {country.population.toLocaleString()}
+                </span>
               </p>
               <p>
-                <strong>Region:</strong> {country.region}
+                <strong>Region:</strong>{" "}
+                <span className="dark:font-light">{country.region}</span>
               </p>
               <p>
-                <strong>Sub Region:</strong> {country.subregion || "N/A"}
+                <strong>Sub Region:</strong>{" "}
+                <span className="dark:font-light">
+                  {country.subregion || "N/A"}
+                </span>
               </p>
               <p>
-                <strong>Capital:</strong> {country.capital || "N/A"}
+                <strong>Capital:</strong>{" "}
+                <span className="dark:font-light">
+                  {country.capital || "N/A"}
+                </span>
               </p>
             </div>
 
             {/* Right Column */}
             <div className="space-y-3">
               <p>
-                <strong>Top Level Domain:</strong> {country.tld.join(", ")}
+                <strong>Top Level Domain:</strong>{" "}
+                <span className="dark:font-light">
+                  {country.tld.join(", ")}
+                </span>
               </p>
               <p>
                 <strong>Currencies:</strong>{" "}
-                {country.currencies
-                  ? Object.keys(country.currencies).join(", ")
-                  : "N/A"}
+                <span className="dark:font-light">
+                  {country.currencies
+                    ? Object.keys(country.currencies).join(", ")
+                    : "N/A"}
+                </span>
               </p>
               <p>
                 <strong>Languages:</strong>{" "}
-                {country.languages
-                  ? Object.values(country.languages).join(", ")
-                  : "N/A"}
+                <span className="dark:font-light">
+                  {country.languages
+                    ? Object.values(country.languages).join(", ")
+                    : "N/A"}
+                </span>
               </p>
             </div>
           </div>

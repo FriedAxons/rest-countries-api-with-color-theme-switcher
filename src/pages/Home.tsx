@@ -29,7 +29,7 @@ const Home = (): JSX.Element => {
     const fetchCountries = async () => {
       try {
         const response = await axios.get<CountryAPIResponse[]>(
-          "https://restcountries.com/v3.1/all"
+          "https://restcountries.com/v3.1/independent?status=true"
         );
 
         // Map the API response to only include the necessary data for the card
@@ -45,6 +45,7 @@ const Home = (): JSX.Element => {
           })
         );
         setCountries(mappedCountries);
+        console.log(mappedCountries); // Check if the data is being set correctly
       } catch (error) {
         console.error("Error fetching countries from API, falling back to local data:", error);
       }
